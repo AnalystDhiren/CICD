@@ -1,20 +1,16 @@
-function startGame() {
-  myGamePiece = new component(30, 30, "red", 10, 120);
-  myGamePiece.gravity = 0.05;
-  myScore = new component("30px", "Consolas", "black", 280, 40, "text");
-  myGameArea.start();
-}
+<p class="helper tap">Hover over the tap to fill the mug #Dhiren :) </p>
+<h1>Fill the mug <span id="target">0</span>%</h1>
+<h2 id="percent-filled"></h2>
+<h3 id="result"></h3>
+<div id="tap-container">
+	<div id="tap"></div>
+	<div id="handle"></div>
+	<div id="pour"></div>
+</div>
 
-var myGameArea = {
-  canvas : document.createElement("canvas"),
-  start : function() {
-    this.canvas.width = 480;
-    this.canvas.height = 270;
-    this.context = this.canvas.getContext("2d");
-    document.body.insertBefore(this.canvas, document.body.childNodes[0]);
-    this.frameNo = 0;
-  },
-  clear : function() {
-    this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
-  }
-}
+<div id="mug-container">
+	<div id="mug">
+		<div id="beer"></div>
+	</div>
+
+	<p class="helper mug">Click the mug to reset</p>
