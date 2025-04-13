@@ -290,7 +290,7 @@ document.addEventListener('keydown', function(e) {
   }
 
   // up arrow key (rotate)
-  if (e.which === 38) {
+  if (e.which === 41) {
     const matrix = rotate(tetromino.matrix);
     if (isValidMove(matrix, tetromino.row, tetromino.col)) {
       tetromino.matrix = matrix;
